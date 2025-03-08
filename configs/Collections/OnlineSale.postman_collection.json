@@ -1,0 +1,908 @@
+{
+	"info": {
+		"_postman_id": "25fd6848-9cbb-464c-a158-99cabb89639e",
+		"name": "OnlineSale",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "42475632"
+	},
+	"item": [
+		{
+			"name": "REGISTER CLIENT",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Joaquin\",\r\n  \"surname\": \"Figureoa\",\r\n  \"username\": \"Joaki\",\r\n  \"email\": \"hfigueroa@gmail.com\",\r\n  \"password\": \"123456\",\r\n  \"phone\": \"50527825\",\r\n  \"role\": \"ADMIN_ROLE\"\r\n}\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/onlineSale/v1/auth/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"onlineSale",
+						"v1",
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LOGIN CLIENT",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"admin@gmail.com\",\r\n  \"password\": \"Admin123\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/onlineSale/v1/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"onlineSale",
+						"v1",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET USERS",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2M5MmYxN2IzMTcxZGFlYTU0OTdmNmUiLCJpYXQiOjE3NDEyMzg1MzksImV4cCI6MTc0MTI0MjEzOX0.TDxO9Tul8UrE4e7D4hVM6NtRblhoHU-NoQDC3LxiS4A",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/onlineSale/v1/users/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"onlineSale",
+						"v1",
+						"users",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET USER ID",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2M4ZDFjN2U1YWFkOGFlZTk2NmEyNjgiLCJpYXQiOjE3NDEyNDIyNTMsImV4cCI6MTc0MTI0NTg1M30.qh28nwOHklzZWKIWuxQltgRaIkZ2HRB3zxoqToDdtCk",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/onlineSale/v1/users/67c8d1c7e5aad8aee966a268",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"onlineSale",
+						"v1",
+						"users",
+						"67c8d1c7e5aad8aee966a268"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT USER",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2M4ZDFjN2U1YWFkOGFlZTk2NmEyNjgiLCJpYXQiOjE3NDEyNDIyNTMsImV4cCI6MTc0MTI0NTg1M30.qh28nwOHklzZWKIWuxQltgRaIkZ2HRB3zxoqToDdtCk",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Pichiya\",\r\n    \"surname\": \"Molina\",\r\n    \"username\": \"Panadero\", \r\n    \"email\": \"aSisimit@gmail.com\",\r\n    \"phone\": \"987654321\",\r\n    \"password\": \"newpassword123\",\r\n    \"role\": \"CLIENT_ROLE\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/onlineSale/v1/users/67c8d1c7e5aad8aee966a268",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"onlineSale",
+						"v1",
+						"users",
+						"67c8d1c7e5aad8aee966a268"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UNSUBSCRIBE USER",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2M4ZDFjN2U1YWFkOGFlZTk2NmEyNjgiLCJpYXQiOjE3NDEyMTQxNTcsImV4cCI6MTc0MTIxNzc1N30.fJm89P9A75lZTVExPKUnDDDqd9OM1pUPD9sDWs4Rm14",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/onlineSale/v1/users/unsubscribe",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"onlineSale",
+						"v1",
+						"users",
+						"unsubscribe"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ADD PRODUCTS",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2M5MmYxN2IzMTcxZGFlYTU0OTdmNmUiLCJpYXQiOjE3NDEyMzg1MzksImV4cCI6MTc0MTI0MjEzOX0.TDxO9Tul8UrE4e7D4hVM6NtRblhoHU-NoQDC3LxiS4A",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Zanahorias\",\r\n    \"description\": \"De Granjas Los Bimbos\",\r\n    \"price\": 2,\r\n    \"category\": \"67c93b6d3da601b5434936bd\",\r\n    \"stock\": 100\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/onlineSale/v1/products/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"onlineSale",
+						"v1",
+						"products",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET PRODUCTS",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/onlineSale/v1/products/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"onlineSale",
+						"v1",
+						"products",
+						""
+					],
+					"query": [
+						{
+							"key": "category",
+							"value": "67bf68ad398485d8d0f8ade8",
+							"disabled": true
+						},
+						{
+							"key": "order",
+							"value": "asc",
+							"disabled": true
+						},
+						{
+							"key": "search",
+							"value": "Carne De Cerdo",
+							"disabled": true
+						},
+						{
+							"key": "name",
+							"value": "Manzana",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET PRODUCTS ID",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JmNjBiNzM5ODQ4NWQ4ZDBmOGFkYTEiLCJpYXQiOjE3NDA1OTUzOTEsImV4cCI6MTc0MDU5ODk5MX0.p1raJ-3a_idmqmBXIpukyO6_AiwjQL5yfj908dlVdSE",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "http://localhost:3000/onlineSale/v1/products/findProduct/67bf61d6398485d8d0f8ada9",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"onlineSale",
+						"v1",
+						"products",
+						"findProduct",
+						"67bf61d6398485d8d0f8ada9"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "MORE SELLING PRODUCTS",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2M5MzBkN2Y4NGNhOTgwMDg1OTJiN2QiLCJpYXQiOjE3NDEyMzg3ODQsImV4cCI6MTc0MTI0MjM4NH0.89zRljowQiwCfi05LB_v1qHRzuBzdsBfzPqXc4XZVvs",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/onlineSale/v1/products/best-selling",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"onlineSale",
+						"v1",
+						"products",
+						"best-selling"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "OUT OF STOCK PRODUCTS",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JmNjBiNzM5ODQ4NWQ4ZDBmOGFkYTEiLCJpYXQiOjE3NDA1OTkwMDUsImV4cCI6MTc0MDYwMjYwNX0.tAhCr3J04mxPx5zOYmIb5Fdgv5c7qdK-WVDwyv88JGw",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/onlineSale/v1/products/out-of-stock",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"onlineSale",
+						"v1",
+						"products",
+						"out-of-stock"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT PRODUCT",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JmNjBiNzM5ODQ4NWQ4ZDBmOGFkYTEiLCJpYXQiOjE3NDA1OTUzOTEsImV4cCI6MTc0MDU5ODk5MX0.p1raJ-3a_idmqmBXIpukyO6_AiwjQL5yfj908dlVdSE",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Yogurt Griego\",\r\n    \"description\": \"Un Bote Grande De Yogurt Griego\",\r\n    \"price\": 120,\r\n    \"category\": \"67bf61b5398485d8d0f8ada5\",\r\n    \"stock\": 60\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/onlineSale/v1/products/67bf61d6398485d8d0f8ada9",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"onlineSale",
+						"v1",
+						"products",
+						"67bf61d6398485d8d0f8ada9"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE PRODUCT",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JmNjBiNzM5ODQ4NWQ4ZDBmOGFkYTEiLCJpYXQiOjE3NDA1OTUzOTEsImV4cCI6MTc0MDU5ODk5MX0.p1raJ-3a_idmqmBXIpukyO6_AiwjQL5yfj908dlVdSE",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/onlineSale/v1/products/67bf61d6398485d8d0f8ada9",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"onlineSale",
+						"v1",
+						"products",
+						"67bf61d6398485d8d0f8ada9"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ADD CATEGORIES",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2M5MmYxN2IzMTcxZGFlYTU0OTdmNmUiLCJpYXQiOjE3NDEyMzg1MzksImV4cCI6MTc0MTI0MjEzOX0.TDxO9Tul8UrE4e7D4hVM6NtRblhoHU-NoQDC3LxiS4A",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Vegetales\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/onlineSale/v1/categories/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"onlineSale",
+						"v1",
+						"categories",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET CATEGORIES",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/onlineSale/v1/categories/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"onlineSale",
+						"v1",
+						"categories",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT CATEGORIES",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2M4ZDEzZTMyNmU1NWJmMmYzYzM0MjEiLCJpYXQiOjE3NDEyMTQ3MTYsImV4cCI6MTc0MTIxODMxNn0.3-bkHO0zBg_OdnD6Pc8n4YevqJ6hpA-3otknAmMnmjo",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n                \"name\": \"Carnes\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/onlineSale/v1/categories/67c8d40c12eedcae89c7da17",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"onlineSale",
+						"v1",
+						"categories",
+						"67c8d40c12eedcae89c7da17"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE CATEGORY",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2M4ZDEzZTMyNmU1NWJmMmYzYzM0MjEiLCJpYXQiOjE3NDEyMTQ3MTYsImV4cCI6MTc0MTIxODMxNn0.3-bkHO0zBg_OdnD6Pc8n4YevqJ6hpA-3otknAmMnmjo",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/onlineSale/v1/categories/67bf7169d08c92b022cc1c1d",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"onlineSale",
+						"v1",
+						"categories",
+						"67bf7169d08c92b022cc1c1d"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ADD CART",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2M4ZDFjN2U1YWFkOGFlZTk2NmEyNjgiLCJpYXQiOjE3NDEyNDA1MzQsImV4cCI6MTc0MTI0NDEzNH0.AvPIeP9VCkpe6eOnnvXmBkj5drXp3hwARLh_TrA4zXE",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"products\": [\r\n        {\r\n            \"productId\": \"67c93bb13da601b5434936c1\",\r\n            \"quantity\": 3\r\n        }\r\n    ]\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/onlineSale/v1/carts/add/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"onlineSale",
+						"v1",
+						"carts",
+						"add",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET CARTS",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2M5MzBkN2Y4NGNhOTgwMDg1OTJiN2QiLCJpYXQiOjE3NDEyMzg3ODQsImV4cCI6MTc0MTI0MjM4NH0.89zRljowQiwCfi05LB_v1qHRzuBzdsBfzPqXc4XZVvs",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/onlineSale/v1/carts/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"onlineSale",
+						"v1",
+						"carts",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "REMOVE CART",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2M4ZDFjN2U1YWFkOGFlZTk2NmEyNjgiLCJpYXQiOjE3NDEyMTUwNjQsImV4cCI6MTc0MTIxODY2NH0.dJPj7A6ij1AmSP7qtjYVH2DLEaCKCGNZct6BLu5jlUY",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/onlineSale/v1/carts/remove/67c8d4be12eedcae89c7da2a",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"onlineSale",
+						"v1",
+						"carts",
+						"remove",
+						"67c8d4be12eedcae89c7da2a"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CLEAR CART",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JmNjBiNzM5ODQ4NWQ4ZDBmOGFkYTEiLCJpYXQiOjE3NDA1OTUzOTEsImV4cCI6MTc0MDU5ODk5MX0.p1raJ-3a_idmqmBXIpukyO6_AiwjQL5yfj908dlVdSE",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/onlineSale/v1/carts/clear",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"onlineSale",
+						"v1",
+						"carts",
+						"clear"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ADD PURCHARSE & BILL",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2M5MzBkN2Y4NGNhOTgwMDg1OTJiN2QiLCJpYXQiOjE3NDEyMzg3ODQsImV4cCI6MTc0MTI0MjM4NH0.89zRljowQiwCfi05LB_v1qHRzuBzdsBfzPqXc4XZVvs",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"cartId\": \"67c93208f84ca98008592b8d\",\r\n  \"shippingAddress\": \"456 Calle Domingo Juarez, Ciudad De Guatemala, Guatemala\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/onlineSale/v1/bills/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"onlineSale",
+						"v1",
+						"bills",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "HISTORY PURCHASE",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2M5MmYxN2IzMTcxZGFlYTU0OTdmNmUiLCJpYXQiOjE3NDEyMzkzMDQsImV4cCI6MTc0MTI0MjkwNH0.lHpDDny8N7tHTqxzI6_doOMxjbeWQPfcaLRf0lftRcw",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/onlineSale/v1/bills/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"onlineSale",
+						"v1",
+						"bills",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET BILLS ID",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2MzM2M1ODYyN2U1OTc1YjU3NTY1NzkiLCJpYXQiOjE3NDA4NDgyNDcsImV4cCI6MTc0MDg1MTg0N30.KfGW_EK-ebIY3IBav1y5OP2uNETHGBOcSp8-r61Tj5c",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/onlineSale/v1/bills/67bf6f2cd08c92b022cc1bf4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"onlineSale",
+						"v1",
+						"bills",
+						"67bf6f2cd08c92b022cc1bf4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT BILLS",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2M5MmYxN2IzMTcxZGFlYTU0OTdmNmUiLCJpYXQiOjE3NDEyNDAzNTQsImV4cCI6MTc0MTI0Mzk1NH0.l7bco7FLx4V86Wwr8rKs01V546GKX6Y9YoQus7-QftE",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"products\": [\r\n        {\r\n            \"product\": \"67c8d43012eedcae89c7da1e\", \r\n            \"quantity\": 2\r\n        },\r\n        {\r\n            \"product\": \"67c93193f84ca98008592b87\", \r\n            \"quantity\": 1\r\n        }\r\n    ],\r\n    \"shippingAddress\": \"789 Another Street, City, Country\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/onlineSale/v1/bills/67c93628f84ca98008592bc2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"onlineSale",
+						"v1",
+						"bills",
+						"67c93628f84ca98008592bc2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PAID BILLS",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2M4ZDEzZTMyNmU1NWJmMmYzYzM0MjEiLCJpYXQiOjE3NDEyMTUwMzIsImV4cCI6MTc0MTIxODYzMn0.44slHIe94DddAV27kOA8-EbDVf5yAh1HW159Y9gxDmY",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/onlineSale/v1/bills/paid/67c8d4e812eedcae89c7da36",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"onlineSale",
+						"v1",
+						"bills",
+						"paid",
+						"67c8d4e812eedcae89c7da36"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CANCEL BILLS",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JmNjBiNzM5ODQ4NWQ4ZDBmOGFkYTEiLCJpYXQiOjE3NDA2MDYyMTUsImV4cCI6MTc0MDYwOTgxNX0.Ol48WgHW4P0IGXJa4nlRmkRLRBvOLhShhzpzgGbz4SM",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/onlineSale/v1/bills/cancel/67bf97f85c2ca9750f4be0f6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"onlineSale",
+						"v1",
+						"bills",
+						"cancel",
+						"67bf97f85c2ca9750f4be0f6"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
